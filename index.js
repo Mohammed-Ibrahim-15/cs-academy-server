@@ -17,3 +17,9 @@ app.listen(port, () => {
 app.get('/all-courses', (req, res) => {
     res.send(courses)
 })
+
+app.get('/course/:id', (req, res) => {
+    const id = req.params.id;
+    const course = courses.find(c => c.course_id == id)
+    res.send(course)
+})
