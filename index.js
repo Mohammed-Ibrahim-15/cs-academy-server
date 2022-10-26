@@ -23,3 +23,9 @@ app.get('/course/:id', (req, res) => {
     const course = courses.find(c => c.course_id == id)
     res.send(course)
 })
+
+app.get('/checkout/:id', (req, res) => {
+    const id = req.params.id;
+    const course = courses.find(c => c.course_id == id)
+    res.send(course)
+})
